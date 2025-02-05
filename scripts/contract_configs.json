@@ -1,0 +1,31 @@
+{
+  "astroport_factory": {
+    "init_params": {
+      "owner": "babylon...",
+      "pair_configs": [
+        {
+          "code_id": "82",
+          "pair_type": { "concentrated": {} },
+          "total_fee_bps": "100",
+          "maker_fee_bps": "50",
+          "is_disabled": false,
+          "is_generator_disabled": false,
+          "permissioned": false
+        },
+        {
+          "code_id": "81",
+          "pair_type": { "xyk": {} },
+          "total_fee_bps": "30",
+          "maker_fee_bps": "10",
+          "is_disabled": false,
+          "is_generator_disabled": false,
+          "permissioned": false
+        }
+      ],
+      "token_code_id": "replace-me",
+      "fee_address": null,
+      "incentives_address": null,
+      "coin_registry_address": "replace-me"
+    }
+  }
+} 
