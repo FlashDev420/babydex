@@ -36,7 +36,9 @@ res=$(babylond tx wasm store "$artifact_path" $keyringBackend --from $userKey --
 echo $res
 txhash=$(echo "$res" | jq -r '.txhash')
 echo "Transaction hash: $txhash"
-sleep 45
+
+# sleep for a little more than 1 block time so the tx is included
+sleep 20
 code_id=$(babylond q tx $txhash -o json --node $nodeUrl | jq -r '.events[] | select(.type == "store_code").attributes[] | select(.key == "code_id").value')
 echo "Code ID: $code_id"
 
