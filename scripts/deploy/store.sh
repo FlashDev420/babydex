@@ -42,7 +42,7 @@ sleep 20
 code_id=$(babylond q tx $txhash -o json --node $nodeUrl | jq -r '.events[] | select(.type == "store_code").attributes[] | select(.key == "code_id").value')
 echo "Code ID: $code_id"
 
-json_file="${REPO_ROOT}/scripts/code_ids.json"
+json_file="${REPO_ROOT}/scripts/deploy/code_ids.json"
 
 if [ ! -f "$json_file" ]; then
     echo "{}" > "$json_file"

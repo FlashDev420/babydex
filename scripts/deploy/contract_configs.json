@@ -1,7 +1,7 @@
 {
   "astroport_factory": {
     "init_params": {
-      "owner": "babylon...",
+      "owner": "bbn1knv468atwzjk4v0d22jwa497v0sd0zez3lh7g3",
       "pair_configs": [
         {
           "code_id": "82",
@@ -10,22 +10,27 @@
           "maker_fee_bps": "50",
           "is_disabled": false,
           "is_generator_disabled": false,
-          "permissioned": false
+          "permissioned": true
         },
         {
-          "code_id": "81",
+          "code_id": "83",
           "pair_type": { "xyk": {} },
-          "total_fee_bps": "30",
+          "total_fee_bps": "100",
           "maker_fee_bps": "10",
           "is_disabled": false,
           "is_generator_disabled": false,
-          "permissioned": false
+          "permissioned": true
         }
       ],
-      "token_code_id": "replace-me",
+      "token_code_id": "1",
       "fee_address": null,
       "incentives_address": null,
       "coin_registry_address": "replace-me"
+    }
+  },
+  "astroport_native_coin_factory": {
+    "init_params": {
+        "owner": "bbn1knv468atwzjk4v0d22jwa497v0sd0zez3lh7g3"
     }
   }
 } 
