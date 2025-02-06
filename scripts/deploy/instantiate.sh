@@ -1,8 +1,6 @@
 #!/bin/bash
 set -eo pipefail
 
-echo "Debug: Script started with arguments: $@"
-
 for cmd in babylond jq git; do
     if ! command -v $cmd &> /dev/null; then
         echo "Error: $cmd is required but not installed."
@@ -11,11 +9,8 @@ for cmd in babylond jq git; do
 done
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
-echo "Debug: REPO_ROOT=$REPO_ROOT"
 
-echo "Debug: About to source set_env.sh"
 source ${REPO_ROOT}/scripts/deploy/set_env.sh
-echo "Debug: Environment loaded"
 
 if [ $# -ne 2 ]; then
     echo "Usage: $0 <filename> <init_json>"
@@ -34,7 +29,7 @@ get_code_id() {
         exit 1 
     fi
     
-    local code_id=$(jq -r ".[\"$contract_name\"] // empty" "${REPO_ROOT}/scripts/deploy/code_ids.json")
+    local code_id=$(jq -r ".[\"$contract_name\"]" "${REPO_ROOT}/scripts/deploy/code_ids.json")
     
     if [[ -z "$code_id" ]]; then
         echo "Error: Contract $contract_name not found in code_ids.json" >&2
