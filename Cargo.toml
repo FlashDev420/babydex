@@ -2,6 +2,7 @@
 resolver = "2"
 members = [
     "packages/*",
+    "contracts/periphery/native_coin_registry",
     "contracts/factory",
     "contracts/pair",
     "contracts/pair_concentrated",
