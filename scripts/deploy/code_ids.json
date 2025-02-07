@@ -1,8 +1,9 @@
 {
-  "astroport_factory": "81",
+  "astroport_factory": "111",
   "astroport_pair_concentrated": "82",
   "astroport_pair": "83",
   "astroport_router": "84",
   "astroport_incentives": "85",
-  "astroport_native_coin_registry": "89"
+  "astroport_native_coin_registry": "89",
+  "cw20_base": "99"
 }

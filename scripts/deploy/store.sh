@@ -21,7 +21,7 @@ done
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
-source ${REPO_ROOT}/scripts/set_env.sh
+source ${REPO_ROOT}/scripts/deploy/set_env.sh
 
 cd ${REPO_ROOT}/artifacts
 
